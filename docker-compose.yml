@@ -1,0 +1,8 @@
+version: '3'
+services:
+  email-processing:
+    build: .
+    volumes:
+      - ./emails/data:/app/data
+      - ./emails/scripts:/app/scripts
+    command: python3 -m scripts.process_emails
